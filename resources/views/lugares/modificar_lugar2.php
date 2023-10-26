@@ -1,15 +1,16 @@
 <?php
 // Incluye la clase Jesuita y la conexión a la base de datos
-require_once '..\includes\conexion_db.php';
-require_once '..\includes\lugares.php';
+require_once '..\..\..\app\Models\database_connector.php';
+require_once '..\..\..\app\Models\lugares.php';
 
 
-if (!empty($_GET['lugar']) && !empty($_GET['descripcion'])) {
+if (!empty($_GET['ip']) && !empty($_GET['lugar']) && !empty($_GET['descripcion'])) {
     $ipLugar = $_GET['ip'];
     $nuevoLugar = $_GET['lugar'];
     $nuevaDescripcion = $_GET['descripcion'];
+    $nuevaIP = $_GET['ip']; // Nueva IP proporcionada en la URL
 
-    $db = new ConexionDB();
+    $db = new DatabaseConnector();
     $lugares = new Lugares($db);
     $resultado = $lugares->update($ipLugar, $nuevoLugar, $nuevaDescripcion);
 

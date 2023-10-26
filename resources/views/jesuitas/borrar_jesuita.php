@@ -7,7 +7,7 @@ require_once '..\..\config\configdb.php';
 // Verifica si se ha enviado un ID Jesuita a través de la URL
 if (isset($_GET['id'])) {
     // Conectarse a la base de datos
-    $db = new ConexionDB();
+    $db = new DatabaseConnector();
     $jesuita = new Jesuita($db);
 
     $idJesuita = $_GET['id']; 

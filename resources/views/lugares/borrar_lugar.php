@@ -1,14 +1,14 @@
 <?php
 // Incluye la clase Jesuita y la conexión a la base de datos
-require_once '..\includes\conexion_db.php';
-require_once '..\includes\lugares.php';
+require_once '..\..\..\app\Models\database_connector.php';
+require_once '..\..\..\app\Models\lugares.php';
 
 // Verifica si se ha enviado un ID Jesuita a través de la URL
 
 echo "ID a eliminar: " . $_GET['ip'];
 if (!empty($_GET['ip'])) {
     // Conectarse a la base de datos
-    $db = new ConexionDB();
+    $db = new DatabaseConnector();
     $lugares = new Lugares($db);
 
     $ipLugar = $_GET['ip']; 

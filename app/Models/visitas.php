@@ -10,7 +10,9 @@ class Visitas {
             $sql = "SELECT v.idVisita, j.nombre AS nombreJesuita, v.fechaHora, l.lugar AS nombreLugar
             FROM visita v
             INNER JOIN jesuita j ON v.idJesuita = j.idJesuita
-            INNER JOIN lugar l ON v.ip = l.ip";
+            INNER JOIN lugar l ON v.ip = l.ip
+            ORDER BY v.fechaHora DESC
+            LIMIT 5;";
     
             $result = $this->db->conexion->query($sql);
     

@@ -1,9 +1,10 @@
 <?php
     // TODO Probar estas rutas en el hosting
-    require_once '..\includes\conexion_db.php';
-    require_once '..\includes\lugares.php';
 
-    $db = new ConexionDB();
+    require_once '..\..\..\app\Models\database_connector.php';
+    require_once '..\..\..\app\Models\lugares.php';
+
+    $db = new DatabaseConnector();
     $lugares = new Lugares($db);
 
     $lugar = $lugares->read();
@@ -59,7 +60,7 @@
     </style>
 </head>
 <body>
-    <h1><a href="../index.html">Lista de Lugares</a></h1>
+    <h1><a href="../../../index.html">Lista de Lugares</a></h1>
     <form method="POST" action="crear_lugar.php"> 
     <label for="ip">IP Lugar</label> 
     <input type="text" name="ip" id="ip"> 
@@ -92,6 +93,6 @@
             }
         ?>
     </table>
-    <a href="../index.html">Volver a la página de inicio</a>
+    <a href="../../../index.html">Volver a la página de inicio</a>
 </body>
 </html>

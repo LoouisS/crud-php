@@ -9,7 +9,7 @@ if (!empty($_GET['nombre']) && !empty($_GET['firma'])) {
     $nuevoNombre = $_GET['nombre'];
     $nuevaFirma = $_GET['firma'];
 
-    $db = new ConexionDB();
+    $db = new DatabaseConnector();
     $jesuita = new Jesuita($db);
     $resultado = $jesuita->update($idJesuita, $nuevoNombre, $nuevaFirma);
 

@@ -1,7 +1,7 @@
 <?php
 // Incluye la clase Lugares y la conexión a la base de datos
-require_once '..\includes\conexion_db.php';
-require_once '..\includes\lugares.php';
+require_once '..\..\..\app\Models\database_connector.php';
+require_once '..\..\..\app\Models\lugares.php';
 
 $mensaje = "";
 
@@ -12,7 +12,7 @@ if (
     !empty($_POST['descripcion'])
 ) {
     // Conectarse a la base de datos
-    $db = new ConexionDB();
+    $db = new DatabaseConnector();
     $lugares = new Lugares($db);
 
     // Obtiene los datos del formulario

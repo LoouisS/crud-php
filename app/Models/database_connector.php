@@ -1,5 +1,8 @@
 <?php
-    require_once("../config/configdb.php");
+    // FIXME No funciona esta ruta xd
+    //require_once '../../config/configdb.php'; 
+    require_once 'C:/xampp/htdocs/projects/servidor/crud-php/config/configdb.php';
+
 
     class DatabaseConnector {
         public $conexion;

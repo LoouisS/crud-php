@@ -12,7 +12,7 @@ if (
     !empty($_POST['firma'])
 ) {
     // Conectarse a la base de datos
-    $db = new ConexionDB();
+    $db = new DatabaseConnector();
     $jesuita = new Jesuita($db);
 
     // Obtiene los datos del formulario

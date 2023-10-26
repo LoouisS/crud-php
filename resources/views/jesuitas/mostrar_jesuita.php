@@ -1,9 +1,10 @@
 <?php
-    // TODO Probar estas rutas en el hosting
-    require_once '..\includes\conexion_db.php';
-    require_once '..\includes\jesuita.php';
 
-    $db = new ConexionDB();
+    require_once '..\..\..\app\Models\database_connector.php';
+    require_once '..\..\..\app\Models\jesuita.php';
+
+
+    $db = new DatabaseConnector();
     $jesuita = new Jesuita($db);
 
     $jesuitas = $jesuita->read();
@@ -59,7 +60,7 @@
     </style>
 </head>
 <body>
-    <h1><a href="../index.html">Lista de Jesuitas</a></h1>
+    <h1><a href="../../../index.html">Lista de Jesuitas</a></h1>
     <form method="POST" action="crear_jesuita.php">
         <label for="idJesuita">Numero Puesto:</label>
         <input type="text" name="idJesuita" id="idJesuita">

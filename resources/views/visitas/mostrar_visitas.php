@@ -1,9 +1,9 @@
 <?php
     // TODO Probar estas rutas en el hosting
-    require_once '..\includes\conexion_db.php';
-    require_once '..\includes\visitas.php';
+    require_once '..\..\..\app\Models\database_connector.php';
+    require_once '..\..\..\app\Models\visitas.php';
 
-    $db = new ConexionDB();
+    $db = new DatabaseConnector();
     $visitas = new Visitas($db);
 
     $visita = $visitas->read();
@@ -59,7 +59,7 @@
     </style>
 </head>
 <body>
-    <h1><a href="../index.html">Lista de Visitas</a></h1>
+    <h1><a href="../../../index.html">Lista de Lugares</a></h1>
     <table border="1">
         <tr>
             <th>Jesuita</th>
@@ -76,6 +76,6 @@
             }
         ?>
     </table>
-    <a href="../index.html">Volver a la página de inicio</a>
+    <a href="../../../index.html">Volver a la página de inicio</a>
 </body>
 </html>
