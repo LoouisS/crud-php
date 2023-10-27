@@ -1,9 +1,8 @@
 <?php
 // Incluye la clase Jesuita y la conexión a la base de datos
-require_once '..\includes\conexion_db.php';
-require_once '..\includes\jesuita.php';
+require_once '..\..\..\app\Models\database_connector.php';
+require_once '..\..\..\app\Models\jesuita.php';
 
-$mensaje = "";
 
 // Verifica si se han enviado datos del formulario
 if (

@@ -82,6 +82,7 @@
             <th>Borrar Jesuita</th>
         </tr>
         <?php
+        // Siempre oa
             foreach ($jesuitas as $j) {
                 echo "<tr>";
                 echo "<td>" . $j['idJesuita'] . "</td>";
@@ -93,6 +94,6 @@
             }
         ?>
     </table>
-    <a href="../index.html">Volver a la página de inicio</a>
+    <a href="../../../index.html">Volver a la página de inicio</a>
 </body>
 </html>

@@ -5,15 +5,12 @@ require_once '..\..\..\app\Models\lugares.php';
 
 // Verifica si se ha enviado un ID Jesuita a través de la URL
 
-echo "ID a eliminar: " . $_GET['ip'];
 if (!empty($_GET['ip'])) {
     // Conectarse a la base de datos
     $db = new DatabaseConnector();
     $lugares = new Lugares($db);
 
     $ipLugar = $_GET['ip']; 
-
-    echo "ID a eliminar: " . $ipLugar;
     
     // Intenta eliminar al Jesuita por su ID
     $mensaje = $lugares->delete($ipLugar);

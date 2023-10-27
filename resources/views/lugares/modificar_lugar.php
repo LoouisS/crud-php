@@ -3,7 +3,7 @@
 require_once '..\..\..\app\Models\database_connector.php';
 require_once '..\..\..\app\Models\lugares.php';
 
-if (isset($_GET['ip']) && !empty($_GET['lugar']) && !empty($_GET['descripcion'])) {
+if (isset($_GET['ip']) && !empty($_GET['lugar'])) {
     $ipLugar = $_GET['ip'];
     $lugar = $_GET['lugar'];
     $descripcion = $_GET['descripcion'];

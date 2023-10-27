@@ -29,11 +29,12 @@
 - [ ] Reestructurar todo el codigo para el hosting
 - [x] Modificar las carpetas en base a esto
     - https://codersfree.com/courses-status/aprende-laravel-avanzado/estructura-de-carpetas
-- [ ] Hacer que mi clase de la conexion herede de mysqli 
 - [ ] Meter Mysqli driver para los errores
 - [ ] Testear los mensajes para el usuario
 - [ ] Quitar CSS de los archivos PHP
 - [x] Cambiar los returns de los strings pero almacenandolo en variable
 - [ ] Quitar todas las validaciones de los archivos que contengan html
 - [x] Listar las ultimas 5 visitas realizadas
-- [ ] Ver por que no se me modifica la IP
+- [?] Ver por que no se me modifica la IP
+- [x] Dejar descripciones del lugar 
+- [ ] Se puede visitar un mismo sitio mas de una vez?

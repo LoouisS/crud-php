@@ -1,8 +1,7 @@
 <?php
 // Incluye la clase Jesuita y la conexión a la base de datos
-require_once '..\..\app\jesuita.php';
-require_once '..\..\app\jesuita.php';
-require_once '..\..\config\configdb.php';
+require_once '..\..\..\app\Models\database_connector.php';
+require_once '..\..\..\app\Models\jesuita.php';
 
 // Verifica si se ha enviado un ID Jesuita a través de la URL
 if (isset($_GET['id'])) {

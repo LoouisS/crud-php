@@ -59,7 +59,32 @@
     </style>
 </head>
 <body>
-    <h1><a href="../../../index.html">Lista de Lugares</a></h1>
+    <h1><a href="../../../index.html">Lista de Visitas</a></h1>
+    <h2>Realizar Visita</h2>
+    <form method="POST" action="realizar_visita.php">
+    <label for="idJesuita">Jesuita</label>
+    <select name="idJesuita" id="idJesuita">
+        <?php
+        $jesuitas = $visitas->obtenerJesuitas();
+        foreach ($jesuitas as $idJesuita => $nombre) {
+            echo "<option value='$idJesuita'>$nombre</option>";
+        }
+        ?>
+    </select>
+    <br>
+    <label for="ipLugar">Visitar</label>
+    <select name="ipLugar" id="ipLugar">
+        <?php
+        $lugares = $visitas->obtenerLugares();
+        foreach ($lugares as $ip => $lugar) {
+            echo "<option value='$ip'>$lugar</option>";
+        }
+        ?>
+    </select>
+    <br>
+    <input type="submit" value="Realizar visita ➕">
+</form>
+
     <table border="1">
         <tr>
             <th>Jesuita</th>
