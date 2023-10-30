@@ -1,15 +1,3 @@
-<?php
-    // TODO Probar estas rutas en el hosting
-
-    require_once '..\..\..\app\Models\database_connector.php';
-    require_once '..\..\..\app\Models\lugares.php';
-
-    $db = new DatabaseConnector();
-    $lugares = new Lugares($db);
-
-    $lugar = $lugares->read();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,6 +70,15 @@
             <th>Borrar Lugar</th>
         </tr>
         <?php
+            // TODO Probar estas rutas en el hosting
+
+            require_once '..\..\..\app\Models\database_connector.php';
+            require_once '..\..\..\app\Models\lugares.php';
+
+            $db = new DatabaseConnector();
+            $lugares = new Lugares($db);
+
+            $lugar = $lugares->read();
             foreach ($lugar as $l) {
                 echo "<tr>";
                 echo "<td>" . $l['ip'] . "</td>";

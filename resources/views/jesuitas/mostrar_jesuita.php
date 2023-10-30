@@ -1,15 +1,3 @@
-<?php
-
-    require_once '..\..\..\app\Models\database_connector.php';
-    require_once '..\..\..\app\Models\jesuita.php';
-
-
-    $db = new DatabaseConnector();
-    $jesuita = new Jesuita($db);
-
-    $jesuitas = $jesuita->read();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,7 +70,14 @@
             <th>Borrar Jesuita</th>
         </tr>
         <?php
-        // Siempre oa
+            require_once '..\..\..\app\Models\database_connector.php';
+            require_once '..\..\..\app\Models\jesuita.php';
+
+            $db = new DatabaseConnector();
+            $jesuita = new Jesuita($db);
+
+            $jesuitas = $jesuita->read();
+
             foreach ($jesuitas as $j) {
                 echo "<tr>";
                 echo "<td>" . $j['idJesuita'] . "</td>";

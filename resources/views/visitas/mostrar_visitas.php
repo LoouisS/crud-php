@@ -1,12 +1,5 @@
 <?php
-    // TODO Probar estas rutas en el hosting
-    require_once '..\..\..\app\Models\database_connector.php';
-    require_once '..\..\..\app\Models\visitas.php';
 
-    $db = new DatabaseConnector();
-    $visitas = new Visitas($db);
-
-    $visita = $visitas->read();
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +58,14 @@
     <label for="idJesuita">Jesuita</label>
     <select name="idJesuita" id="idJesuita">
         <?php
+        // TODO Probar estas rutas en el hosting
+        require_once '..\..\..\app\Models\database_connector.php';
+        require_once '..\..\..\app\Models\visitas.php';
+
+        $db = new DatabaseConnector();
+        $visitas = new Visitas($db);
+
+        $visita = $visitas->read();
         $jesuitas = $visitas->obtenerJesuitas();
         foreach ($jesuitas as $idJesuita => $nombre) {
             echo "<option value='$idJesuita'>$nombre</option>";
