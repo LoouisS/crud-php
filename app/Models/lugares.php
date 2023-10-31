@@ -7,7 +7,6 @@ class Lugares {
     }
 
     public function create($ip, $lugar, $descripcion) {
-        $mensaje = "";
         try {
             $sql = "INSERT INTO lugar (ip, lugar, descripcion) VALUES ('$ip', '$lugar', '$descripcion')";
             if ($this->db->conexion->query($sql)) {

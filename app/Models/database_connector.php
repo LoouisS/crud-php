@@ -1,5 +1,4 @@
 <?php
-    // FIXME No funciona esta ruta xd
     require_once '..\..\..\config\configdb.php'; 
 
     class DatabaseConnector {

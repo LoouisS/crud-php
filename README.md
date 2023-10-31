@@ -16,7 +16,7 @@
 - [x] Mostrar todas las visitas realizadas.
 
 ### F4: Realizar visita (Alumno)
-- [ ] Alumno visita un lugar con su jesuita.
+- [x] Alumno visita un lugar con su jesuita.
 
 - [x] Solucionar los errores mediante try catch
 - [x] Añadir los botones de eliminar, modificar y crear a la tabla con los jesuitas
@@ -26,7 +26,7 @@
 
 ## Fixear
 - [x] Ver si mi constructor hace la conexion
-- [ ] Reestructurar todo el codigo para el hosting
+- [x] Reestructurar todo el codigo para el hosting
 - [x] Modificar las carpetas en base a esto
     - https://codersfree.com/courses-status/aprende-laravel-avanzado/estructura-de-carpetas
 - [ ] Meter Mysqli driver para los errores
@@ -38,3 +38,9 @@
 - [?] Ver por que no se me modifica la IP
 - [x] Dejar descripciones del lugar 
 - [ ] Se puede visitar un mismo sitio mas de una vez?
+- [ ] Valorar si pongo las modificaciones en cascada para que la cambie en visita
+
+---
+Si tengo en el diseño de base de datos las modificaciones y borrado en cascada, no puedo poner mensajes
+para preguntas por dichas acciones. No permitir el borrado en cascada, preguntar por si quiere borrar sus visitas
+y, en caso afirmativo, hago el delete en la tabla visitas y luego en la otra tabla.
