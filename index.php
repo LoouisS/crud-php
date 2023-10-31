@@ -74,7 +74,6 @@
         </tr>
         <?php
             ini_set('display_errors', 1);
-            echo getcwd();
             require_once getcwd() . '/app/Models/database_connector.php';
             require_once getcwd() . '/app/Models/lugares.php';
 
@@ -93,6 +92,6 @@
             }
         ?>
     </table>
-    <a href="../../../index.html">Volver a la página de inicio</a>
+    <a href="index.php">Volver a la página de inicio</a>
 </body>
 </html>

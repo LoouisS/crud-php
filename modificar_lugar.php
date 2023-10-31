@@ -31,6 +31,6 @@
         <br>
         <input type="submit" value="Guardar Cambios">
     </form>
-    <a href="mostrar_lugar.php">Volver a la lista de Lugares</a>
+    <a href="index.php">Volver a la página de inicio</a>
 </body>
 </html>

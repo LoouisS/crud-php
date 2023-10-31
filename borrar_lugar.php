@@ -25,7 +25,6 @@
         echo "<p>$mensaje</p>";
     }
     ?>
-
-    <a href="mostrar_lugares.php">Volver a la página de inicio</a>
+    <a href="index.php">Volver a la página de inicio</a>
 </body>
 </html>
