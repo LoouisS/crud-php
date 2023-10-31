@@ -1,5 +1,5 @@
 <?php
-    require_once '..\..\..\config\configdb.php'; 
+    require_once 'config\configdb.php'; 
 
     class DatabaseConnector {
         public $conexion;
