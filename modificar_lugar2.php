@@ -6,9 +6,8 @@
 <body>
     <?php
     // Incluye la clase Jesuita y la conexión a la base de datos
-    require_once 'app\Models\database_connector.php';
-    require_once 'app\Models\lugares.php';
-
+    require_once getcwd() . 'app\Models\database_connector.php';
+    require_once getcwd() . 'app\Models\lugares.php';
 
     if (!empty($_GET['ip'])&& !empty($_GET['lugar'])) {
         $ipLugar = $_GET['ip'];

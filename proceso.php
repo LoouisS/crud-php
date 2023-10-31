@@ -1,4 +1,3 @@
-
 <?php
 if (isset($_GET['accion'])) {
     $accion = $_GET['accion'];

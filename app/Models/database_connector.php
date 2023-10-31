@@ -1,6 +1,6 @@
 <?php
-    require_once 'config\configdb.php'; 
-
+    
+    require_once getcwd() . '/config/configdb.php'; 
     class DatabaseConnector {
         public $conexion;
         public function __construct() {

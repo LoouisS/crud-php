@@ -1,11 +1,9 @@
 <?php
 class Jesuita {
     private $db;
-
     public function __construct($db) {
         $this->db = $db;
     }
-
     public function create($idJesuita, $nombre, $firma) {
         try {
             // Insertar el nuevo Jesuita
@@ -25,7 +23,6 @@ class Jesuita {
             }
         }
     }
-
     public function read($idJesuita = null) {
         try {
             $sql = "SELECT idJesuita, nombre, firma FROM jesuita";
@@ -50,14 +47,11 @@ class Jesuita {
     }
     public function update($idJesuita, $nuevoNombre, $nuevaFirma) {
         try {
-            // Verificar si el ID Jesuita es un número entero
             if (!is_numeric($idJesuita)) {
                 $mensaje = "El ID Jesuita debe ser un número entero.";
                 return $mensaje;
             }
-    
             $sql = "UPDATE jesuita SET nombre = '$nuevoNombre', firma = '$nuevaFirma' WHERE idJesuita = $idJesuita";
-    
             if ($this->db->conexion->query($sql)) {
                 $mensaje = "Jesuita con ID $idJesuita ha sido actualizado exitosamente.";
                 return $mensaje;
@@ -69,18 +63,14 @@ class Jesuita {
             return $mensaje;
         }
     } 
-
     public function delete($idJesuita) {
         // Verificar si el ID Jesuita es un número entero
         if (!is_numeric($idJesuita)) {
             $mensaje = "El ID Jesuita debe ser un número entero.";
             return $mensaje;
         }
-    
         $conexion = $this->db->conexion;
-    
         $sql = "DELETE FROM jesuita WHERE idJesuita = $idJesuita";
-        
         if ($conexion->query($sql)) {
             if ($conexion->affected_rows > 0) {
                 $mensaje = "Jesuita con ID $idJesuita ha sido eliminado exitosamente.";

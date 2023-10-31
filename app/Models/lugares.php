@@ -1,11 +1,9 @@
 <?php
 class Lugares {
     private $db;
-
     public function __construct($db) {
         $this->db = $db;
     }
-
     public function create($ip, $lugar, $descripcion) {
         try {
             $sql = "INSERT INTO lugar (ip, lugar, descripcion) VALUES ('$ip', '$lugar', '$descripcion')";
@@ -23,18 +21,14 @@ class Lugares {
             }
         }
     }
-
     public function read($ip = null) {
         $mensaje = "";
         try {
             $sql = "SELECT ip, lugar, descripcion FROM lugar";
-
             if ($ip !== null) {
                 $sql .= " WHERE ip = '$ip'";
             }
-
             $result = $this->db->conexion->query($sql);
-
             $lugares = array();
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -47,12 +41,10 @@ class Lugares {
             return $mensaje;
         }
     }
-
     public function update($ip, $nuevolugar, $nuevadescripcion) {
         $mensaje = "";
         try {
             $sql = "UPDATE lugar SET lugar = '$nuevolugar', descripcion = '$nuevadescripcion' WHERE ip = '$ip'";
-
             if ($this->db->conexion->query($sql)) {
                 $mensaje = "Lugar con IP $ip ha sido actualizado exitosamente.";
             } else {
@@ -63,7 +55,6 @@ class Lugares {
         }
         return $mensaje;
     }
-
     public function delete($ip) {
         
         // TODO Validar la IP

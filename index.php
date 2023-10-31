@@ -73,8 +73,10 @@
             <th>Borrar Lugar</th>
         </tr>
         <?php
-            require_once 'app\Models\database_connector.php';
-            require_once 'app\Models\lugares.php';
+            ini_set('display_errors', 1);
+            echo getcwd();
+            require_once getcwd() . '/app/Models/database_connector.php';
+            require_once getcwd() . '/app/Models/lugares.php';
 
             $db = new DatabaseConnector();
             $lugares = new Lugares($db);
