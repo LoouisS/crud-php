@@ -74,8 +74,8 @@
         </tr>
         <?php
             // TODO Probar estas rutas en el hosting
-            require_once '..\..\..\app\Models\database_connector.php';
-            require_once '..\..\..\app\Models\lugares.php';
+            require_once getcwd() . '/app/Models/database_connector.php';
+            require_once getcwd() . '/app/Models/lugares.php';
 
             $db = new DatabaseConnector();
             $lugares = new Lugares($db);

@@ -59,8 +59,8 @@
     <select name="idJesuita" id="idJesuita">
         <?php
         // TODO Probar estas rutas en el hosting
-        require_once '..\..\..\app\Models\database_connector.php';
-        require_once '..\..\..\app\Models\visitas.php';
+        require_once getcwd() . '/app/Models/database_connector.php';
+        require_once getcwd() . '/app/Models/visitas.php';
 
         $db = new DatabaseConnector();
         $visitas = new Visitas($db);

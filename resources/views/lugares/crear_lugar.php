@@ -8,8 +8,8 @@
 
     <?php
     // Incluye la clase Lugares y la conexión a la base de datos
-    require_once '..\..\..\app\Models\database_connector.php';
-    require_once '..\..\..\app\Models\lugares.php';
+    require_once getcwd() . '/app/Models/database_connector.php';
+    require_once getcwd() . '/app/Models/lugares.php';
 
     $mensaje = "";
 
