@@ -5,6 +5,7 @@
 - [x] **F1.1 Añadir (Alumno)**: Introducción del jesuita en la base de datos por parte del alumno.
 - [x] **F1.2 Modificar (Alumno)**: Modificación de los datos de un jesuita introducido anteriormente por el alumno.
 - [x] **F1.3 Borrar (Profesor)**: Borrar jesuitas registrados en la base de datos, proporcionando el ID.
+- [ ]. Cambiar lo de jesuitas para que, meta un numero de puesto y me salga el formulario para modificarlo.
 
 ### F2: Gestión Lugares
 - [x] **F2.1 Añadir (Profesor)**: Introducir lugares en la base de datos por parte del profesor.
